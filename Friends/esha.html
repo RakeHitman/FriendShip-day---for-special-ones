@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dear friend , Esha !</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #282c34;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: #2cf5d0;
+            font-size: 24px;
+            user-select: none;
+            pointer-events: none;
+            z-index: 9999;
+            animation: fall linear;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        #element {
+            font-size: 2rem;
+            color: rgb(255, 255, 255);
+            font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+            text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+                -1px 1px 0 #000, 0 0 5px #fff,
+                /* Inner glow */
+                0 0 10px #fff,
+                /* Outer glow */
+                0 0 15px #fff, 0 0 20px #fff, 0 0 25px #fff;
+            /* Stronger outer glow */
+        }
+
+        .container {
+            height: 60rem;
+            width: 70rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container div {
+            color: white;
+        }
+
+        .upper {
+            height: 18rem;
+            width: 68rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #375d72;
+            /* background-image: url("../images/header.jpg");
+            background-size: cover; */
+            border-bottom: 1px solid white;
+        }
+
+        .lower {
+            height: 45rem;
+            width: 68rem;
+            display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url("../images/mainShin.jpg");
+                background-size: cover;
+            opacity: 0.8;
+        }
+
+                    /* Responsiveness  */
+
+        @media (max-width:670px) {
+            .upper {
+                height: 18rem;
+                width: 68rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .lower {
+                height: 42rem;
+                width: 68rem;
+                background-image: url("../images/mainShin.jpg");
+                background-size: cover;
+            opacity: 0.8;
+            }
+        }
+
+        @media (max-width:664px) {
+            .container {
+            height: 65rem;
+            width: 26rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .upper {
+                height: 23rem;
+                width: 68rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                border-bottom: 1px solid white;
+            }
+
+            .lower {
+                height: 42rem;
+                width: 68rem;
+                background-image: url("../images/mainShin.jpg");
+                background-size: cover;
+            opacity: 0.8;
+            }
+
+            #element {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width:576px) {
+            .upper {
+                height: 26rem;
+                width: 68rem;
+                border: 1px solid white;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .lower {
+                height: 42rem;
+                width: 68rem;
+                border: 1px solid white;
+                background-image: url("../images/mainShin.jpg");
+                background-size: cover;
+            opacity: 0.8;
+            }
+
+            #element {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width:446px) {
+            .container {
+            height: 65rem;
+            width: 19rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .upper {
+                height: 26rem;
+                width: 68rem;
+                /* border: 1px solid white; */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .lower {
+                height: 42rem;
+                width: 68rem;
+                /* border: 1px solid white; */
+                background-image: url("../images/mainShin.jpg");
+                background-size: cover;
+            opacity: 0.8;
+            }
+
+            #element {
+                font-size: 0.9rem;
+                height: 2rem;
+                width: 22rem;
+            }
+
+            .mainPara {
+                font-size: 0.9rem;
+            }
+
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="upper">
+            <h2>Dear ESHA 😎</h2>
+            <p class="mainPara">Play this and have nostalgia of good old days !</p>
+            <audio id="background-audio" controls autoplay>
+                <source src="../music/A Thousand Years(MP3_160K).mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <h1><span id="element"> </span></h1>
+        </div>
+        <div class="lower">
+            <div class="card" style="width: 18rem;">
+                <img src="../images/esha.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text" style="color: black;">I do miss roasting you out , I do miss annoying you , I do miss 
+                        the after school gossips , I do miss you too सखी , <b>Wishing you a very happy friendship day !</b>
+                        ( umhmm , bade log ) . The only good pic I have of you ! lol
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        const numFlakes = 100;
+        // Create snowflakes
+        for (let i = 0; i < numFlakes; i++) {
+            const snowflake = document.createElement("div");
+            snowflake.className = "snowflake";
+            snowflake.textContent = "❄"; // Snowflake character
+            snowflake.style.left = `${Math.random() * 100}vw`;
+            snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            snowflake.style.opacity = `${Math.random()}`;
+            snowflake.style.fontSize = `${Math.random() * 10 + 10}px`;
+            snowflake.style.animationDelay = `${Math.random() * 10}s`;
+
+            document.body.appendChild(snowflake);
+        }
+        var typed = new Typed("#element", {
+            strings: [
+                "I don't have a million of friends",
+                "But the ones I have are definetly worth a million !",
+                "You are one of them परम मित्र 🤜🤛 🥰",
+            ],
+            typeSpeed: 110,
+        });
+    </script>
+</body>
+
+</html>
